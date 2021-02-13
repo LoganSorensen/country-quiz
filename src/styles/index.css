@@ -1,0 +1,271 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  background-image: url("../assets/background.png");
+  background-size: 100%;
+}
+html,
+button {
+  font-family: "Poppins", sans-serif;
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+.App {
+  width: 25%;
+  margin: 6% auto 0;
+}
+h1 {
+  text-transform: uppercase;
+  color: #f2f2f2;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 4%;
+}
+.card {
+  width: 100%;
+  background-color: white;
+  border-radius: 24px;
+  padding: 8%;
+}
+.quiz-card {
+  position: relative;
+  padding: 15% 8%;
+}
+.quiz-card img {
+  position: absolute;
+  top: -75px;
+  right: 0;
+}
+.quiz-card .question {
+  color: #2f527b;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 6%;
+}
+.quiz-card .options {
+  display: flex;
+  flex-direction: column;
+}
+.quiz-card .quiz-option {
+  color: rgba(96, 102, 208, 0.8);
+  background-color: transparent;
+  border: 2px solid rgba(96, 102, 208, 0.7);
+  border-radius: 12px;
+  text-align: start;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 2% 5%;
+  margin: 4% 0;
+  cursor: pointer;
+}
+.quiz-card .quiz-option:hover {
+  background-color: #f9a826;
+  border-color: #f9a826;
+  color: white;
+}
+.quiz-card .quiz-option span {
+  margin-right: 10%;
+  font-size: 24px;
+}
+.quiz-card .no-hover {
+  pointer-events: none;
+}
+.quiz-card .correct,
+.quiz-card .incorrect {
+  color: white;
+}
+.quiz-card .correct {
+  background-color: #60bf88;
+  border-color: #60bf88;
+}
+.quiz-card .incorrect {
+  background-color: #ea8282;
+  border-color: #ea8282;
+}
+.results-card {
+  color: #1d355d;
+  text-align: center;
+}
+.results-card img {
+  margin-bottom: 15%;
+}
+.results-card h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 6%;
+}
+.results-card p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20%;
+}
+.results-card span {
+  color: #60bf88;
+  font-size: 36px;
+  font-weight: 700;
+}
+.results-card button {
+  border: 2px solid #1d355d;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 3%;
+  width: 50%;
+}
