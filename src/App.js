@@ -10,6 +10,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(0);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [gameNumber, setGameNumber] = useState(0);
 
   useEffect(() => {
     axios
@@ -18,7 +19,7 @@ function App() {
         setCountries(res.data);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [gameNumber]);
 
   const incrementQuestionNumber = () => {
     setQuestionNumber(questionNumber + 1);
@@ -30,7 +31,10 @@ function App() {
 
   const resetGame = () => {
     setQuestionNumber(0);
-  }
+    setCorrectAnswers(0);
+    setGameNumber(gameNumber + 1);
+    console.log(countries, questionNumber);
+  };
 
   return (
     <div className="App">
