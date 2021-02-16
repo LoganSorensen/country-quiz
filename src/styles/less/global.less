@@ -17,6 +17,32 @@ button {
 .App {
   width: 25%;
   margin: 6% auto 0;
+
+  @media @laptop {
+    width: 35%;
+  }
+
+  @media @laptop-small {
+    width: 45%;
+  }
+
+  @media @tablet {
+    width: 55%;
+  }
+
+  @media @tablet-small {
+    margin-top: 10%;
+    width: 75%;
+  }
+
+  @media @mobile-large {
+    margin: 15% auto;
+    width: 85%;
+  }
+
+  @media @mobile {
+    width: 90%;
+  }
 }
 
 h1 {
@@ -25,4 +51,12 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 4%;
+
+  @media @tablet {
+    font-size: 28px;
+  }
+
+  @media @mobile-small {
+    font-size: 25px;
+  }
 }

@@ -170,12 +170,54 @@ button {
   width: 25%;
   margin: 6% auto 0;
 }
+@media (max-width: 1700px) {
+  .App {
+    width: 35%;
+  }
+}
+@media (max-width: 1250px) {
+  .App {
+    width: 45%;
+  }
+}
+@media (max-width: 950px) {
+  .App {
+    width: 55%;
+  }
+}
+@media (max-width: 650px) {
+  .App {
+    margin-top: 10%;
+    width: 75%;
+  }
+}
+@media (max-width: 425px) {
+  .App {
+    margin: 15% auto;
+    width: 85%;
+  }
+}
+@media (max-width: 375px) {
+  .App {
+    width: 90%;
+  }
+}
 h1 {
   text-transform: uppercase;
   color: #f2f2f2;
   font-size: 36px;
   font-weight: 700;
   margin-bottom: 4%;
+}
+@media (max-width: 950px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 25px;
+  }
 }
 .card {
   width: 100%;
@@ -192,11 +234,22 @@ h1 {
   top: -75px;
   right: 0;
 }
+@media (max-width: 650px) {
+  .quiz-card img {
+    width: 35%;
+    top: -60px;
+  }
+}
 .quiz-card .question {
   color: #2f527b;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 6%;
+}
+@media (max-width: 425px) {
+  .quiz-card .question {
+    font-size: 20px;
+  }
 }
 .quiz-card .flag {
   position: initial;
