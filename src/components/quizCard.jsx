@@ -1,4 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCheckCircle,
+  faTimesCircle,
+} from "@fortawesome/free-regular-svg-icons";
 
 import globeImage from "../assets/undraw_adventure_4hum 1.svg";
 
@@ -11,6 +16,7 @@ const QuizCard = (props) => {
   const [questionAnswered, setQuestionAnswered] = useState(false);
 
   let optionButtons = document.querySelectorAll(".quiz-option");
+  let icons = document.querySelectorAll(".svg-inline--fa");
 
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * Math.floor(max));
@@ -25,11 +31,15 @@ const QuizCard = (props) => {
   };
 
   const resetState = () => {
+    icons = document.querySelectorAll(".svg-inline--fa");
     setQuestionAnswered(false);
     optionButtons.forEach((button) => {
       button.classList.remove("correct");
       button.classList.remove("incorrect");
       button.classList.remove("no-hover");
+    });
+    icons.forEach((icon) => {
+      icon.classList.remove("display");
     });
   };
 
@@ -53,6 +63,7 @@ const QuizCard = (props) => {
     optionButtons.forEach((button) => {
       button.classList.add("no-hover");
       if (countryOptions[questionNumber].name === button.value) {
+        button.children[1].classList.add("display");
         button.classList.add("correct");
       }
     });
@@ -62,6 +73,7 @@ const QuizCard = (props) => {
       props.incrementCorrectAnswers();
     } else {
       e.target.classList.add("incorrect");
+      e.target.children[2].classList.add("display");
     }
 
     setQuestionAnswered(true);
@@ -95,32 +107,48 @@ const QuizCard = (props) => {
               value={countryOptions[0].name}
               onClick={selectOption}
             >
-              <span>A</span>
-              {countryOptions[0].name}
+              <div className="no-hover">
+                <span>A</span>
+                {countryOptions[0].name}
+              </div>
+              <FontAwesomeIcon className="test" icon={faCheckCircle} />
+              <FontAwesomeIcon icon={faTimesCircle} />
             </button>
             <button
               className="quiz-option"
               value={countryOptions[1].name}
               onClick={selectOption}
             >
-              <span>B</span>
-              {countryOptions[1].name}
+              <div className="no-hover">
+                <span>B</span>
+                {countryOptions[1].name}
+              </div>
+              <FontAwesomeIcon icon={faCheckCircle} />
+              <FontAwesomeIcon icon={faTimesCircle} />
             </button>
             <button
               className="quiz-option"
               value={countryOptions[2].name}
               onClick={selectOption}
             >
-              <span>C</span>
-              {countryOptions[2].name}
+              <div className="no-hover">
+                <span>C</span>
+                {countryOptions[2].name}
+              </div>
+              <FontAwesomeIcon icon={faCheckCircle} />
+              <FontAwesomeIcon icon={faTimesCircle} />
             </button>
             <button
               className="quiz-option"
               value={countryOptions[3].name}
               onClick={selectOption}
             >
-              <span>D</span>
-              {countryOptions[3].name}
+              <div className="no-hover">
+                <span>D</span>
+                {countryOptions[3].name}
+              </div>
+              <FontAwesomeIcon icon={faCheckCircle} />
+              <FontAwesomeIcon icon={faTimesCircle} />
             </button>
           </div>
           {questionAnswered === true && (

@@ -9,7 +9,7 @@
   position: relative;
   padding: 15% 8% 10%;
 
- img {
+  img {
     position: absolute;
     top: -75px;
     right: 0;
@@ -23,7 +23,7 @@
   }
 
   .flag {
-    position:initial;
+    position: initial;
     width: 30%;
     margin-bottom: 8%;
     border-radius: 4px;
@@ -45,6 +45,9 @@
     font-weight: 500;
     padding: 2% 5%;
     margin: 4% 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     cursor: pointer;
     &:hover {
       background-color: @yellow-highlight;
@@ -52,9 +55,22 @@
       color: white;
     }
 
+    div {
+      width: 100%;
+    }
+
     span {
       margin-right: 10%;
       font-size: 24px;
+    }
+
+    .display {
+      display: inline !important;
+    }
+
+    .fa-times-circle,
+    .fa-check-circle {
+      display: none;
     }
   }
 

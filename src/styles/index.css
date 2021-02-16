@@ -219,6 +219,9 @@ h1 {
   font-weight: 500;
   padding: 2% 5%;
   margin: 4% 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 }
 .quiz-card .quiz-option:hover {
@@ -226,9 +229,19 @@ h1 {
   border-color: #f9a826;
   color: white;
 }
+.quiz-card .quiz-option div {
+  width: 100%;
+}
 .quiz-card .quiz-option span {
   margin-right: 10%;
   font-size: 24px;
+}
+.quiz-card .quiz-option .display {
+  display: inline !important;
+}
+.quiz-card .quiz-option .fa-times-circle,
+.quiz-card .quiz-option .fa-check-circle {
+  display: none;
 }
 .quiz-card .no-hover {
   pointer-events: none;
