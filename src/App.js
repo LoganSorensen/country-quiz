@@ -33,7 +33,6 @@ function App() {
     setQuestionNumber(0);
     setCorrectAnswers(0);
     setGameNumber(gameNumber + 1);
-    console.log(countries, questionNumber);
   };
 
   return (

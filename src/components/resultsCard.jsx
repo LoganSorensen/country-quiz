@@ -8,7 +8,8 @@ const ResultsCard = (props) => {
       <img src={victoryImage} alt="celebration" />
       <h2>Results</h2>
       <p>
-        You got <span>{props.correctAnswers}</span> correct answers
+        You got <span>{props.correctAnswers}</span> correct answer
+        {props.correctAnswers > 1 ? "s" : ""}
       </p>
       <button className="reattempt-btn" onClick={props.resetGame}>
         Try again
@@ -18,4 +19,3 @@ const ResultsCard = (props) => {
 };
 
 export default ResultsCard;
- 

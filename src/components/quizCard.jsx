@@ -7,6 +7,7 @@ const QuizCard = (props) => {
   const [countryOptions, setCountryOptions] = useState([]);
   const [countryNumbers, setCountryNumbers] = useState([]);
   const [questionNumber, setQuestionNumber] = useState(null);
+  const [questionType, setQuestionType] = useState(null);
   const [questionAnswered, setQuestionAnswered] = useState(false);
 
   let optionButtons = document.querySelectorAll(".quiz-option");
@@ -35,6 +36,7 @@ const QuizCard = (props) => {
   useEffect(() => {
     getFourNumbers();
     setQuestionNumber(getRandomInt(4));
+    setQuestionType(getRandomInt(2));
     // this temporary array is need to house the
     // options before setting them to state, rather than updating the state
     // in each iteration of the loop
@@ -69,11 +71,23 @@ const QuizCard = (props) => {
     <>
       {countryOptions[0] !== undefined && (
         <div className="card quiz-card">
-          <img src={globeImage} alt="globe" />
-
-          <h2 className="question">
-            {countryOptions[questionNumber].capital} is the capital of
-          </h2>
+          <img src={globeImage} alt="globe" className="globe-img" />
+          {questionType === 0 ? (
+            <h2 className="question">
+              {countryOptions[questionNumber].capital} is the capital of
+            </h2>
+          ) : (
+            <div className="flag-question">
+              <img
+                src={countryOptions[questionNumber].flag}
+                alt="country flag"
+                className="flag"
+              />
+              <h2 className="question">
+                Which country does this flag belong to?
+              </h2>
+            </div>
+          )}
 
           <div className="options">
             <button

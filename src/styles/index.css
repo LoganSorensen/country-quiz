@@ -198,6 +198,13 @@ h1 {
   font-weight: 700;
   margin-bottom: 6%;
 }
+.quiz-card .flag {
+  position: initial;
+  width: 30%;
+  margin-bottom: 8%;
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.1));
+}
 .quiz-card .options {
   display: flex;
   flex-direction: column;
