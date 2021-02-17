@@ -193,7 +193,7 @@ button {
 }
 @media (max-width: 425px) {
   .App {
-    margin: 15% auto;
+    margin: 10% auto;
     width: 85%;
   }
 }
