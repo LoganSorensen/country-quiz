@@ -3,11 +3,15 @@
   background-color: white;
   border-radius: 24px;
   padding: 8%;
+
 }
 
 .quiz-card {
   position: relative;
   padding: 15% 8% 10%;
+  @media @mobile-large {
+   padding: 12% 8% 5%;
+  }
 
   img {
     position: absolute;
@@ -28,6 +32,7 @@
 
     @media @mobile-large {
       font-size: 20px;
+      // margin-bottom: 4%;
     }
   }
 
@@ -63,9 +68,10 @@
       border-color: @yellow-highlight;
       color: white;
     }
-    &:active {
-      background-color: transparent;
-      border-color: initial;
+    
+    @media @mobile-large {
+      margin: 3% 0;
+      padding: 1.5% 4%;
     }
 
     div {
@@ -75,6 +81,10 @@
     span {
       margin-right: 10%;
       font-size: 24px;
+
+      @media @mobile-large{
+        margin-right: 7%;
+      }
     }
 
     .display {

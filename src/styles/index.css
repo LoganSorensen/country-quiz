@@ -229,6 +229,11 @@ h1 {
   position: relative;
   padding: 15% 8% 10%;
 }
+@media (max-width: 425px) {
+  .quiz-card {
+    padding: 12% 8% 5%;
+  }
+}
 .quiz-card img {
   position: absolute;
   top: -75px;
@@ -282,9 +287,11 @@ h1 {
   border-color: #f9a826;
   color: white;
 }
-.quiz-card .quiz-option:active {
-  background-color: transparent;
-  border-color: initial;
+@media (max-width: 425px) {
+  .quiz-card .quiz-option {
+    margin: 3% 0;
+    padding: 1.5% 4%;
+  }
 }
 .quiz-card .quiz-option div {
   width: 100%;
@@ -292,6 +299,11 @@ h1 {
 .quiz-card .quiz-option span {
   margin-right: 10%;
   font-size: 24px;
+}
+@media (max-width: 425px) {
+  .quiz-card .quiz-option span {
+    margin-right: 7%;
+  }
 }
 .quiz-card .quiz-option .display {
   display: inline !important;
