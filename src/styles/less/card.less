@@ -63,6 +63,10 @@
       border-color: @yellow-highlight;
       color: white;
     }
+    &:active {
+      background-color: transparent;
+      border-color: initial;
+    }
 
     div {
       width: 100%;
@@ -95,11 +99,19 @@
   .correct {
     background-color: @green;
     border-color: @green;
+    &:hover {
+      background-color: @green;
+      border-color: @green;
+    }
   }
 
   .incorrect {
     background-color: @red;
     border-color: @red;
+    &:hover {
+      background-color: @red;
+      border-color: @red;
+    }
   }
 }
 

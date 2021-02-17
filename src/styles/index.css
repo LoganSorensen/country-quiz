@@ -282,6 +282,10 @@ h1 {
   border-color: #f9a826;
   color: white;
 }
+.quiz-card .quiz-option:active {
+  background-color: transparent;
+  border-color: initial;
+}
 .quiz-card .quiz-option div {
   width: 100%;
 }
@@ -307,7 +311,15 @@ h1 {
   background-color: #60bf88;
   border-color: #60bf88;
 }
+.quiz-card .correct:hover {
+  background-color: #60bf88;
+  border-color: #60bf88;
+}
 .quiz-card .incorrect {
+  background-color: #ea8282;
+  border-color: #ea8282;
+}
+.quiz-card .incorrect:hover {
   background-color: #ea8282;
   border-color: #ea8282;
 }
